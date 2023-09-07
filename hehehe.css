@@ -1,0 +1,55 @@
+ /* Reset some default styles */
+ body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Define the initial background */
+body {
+    background-image: url('initial-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.context-menu {
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.context-menu ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.context-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.context-menu:hover ul {
+    display: block;
+}
+
+
+#background-select {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <link rel="stylesheet" href="hehehe.css">
+       
+<body>
+    
+    <div class="context-menu" id="background-menu">
+        Background Options
+        <ul>
+            <li data-bg="naruto.jpg">Naruto</li>
+            <li data-bg="onepiece.jpg">One Piece</li>
+            <li data-bg="demonslayer.jpg">Demon slayer</li>
+            <li data-bg="goku.jpg">Dragon ball</li>
+        </ul>
+    </div>
+
+  
+    <select id="background-select">
+        <option value="naruto.jpg">Naruto</option>
+        <option value="onepiece.jpg">One Piece</option>
+        <option value="demonslayer.jpg">Demon Slayer</option>
+        <option value="goku.jpg">Dragon Ball</option>
+    </select>
+
+    <script>
+       
+        const menu = document.getElementById('background-menu');
+        const menuItems = menu.querySelectorAll('li');
+
+      
+        const selectMenu = document.getElementById('background-select');
+
+        
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const backgroundImage = item.getAttribute('data-bg');
+                document.body.style.backgroundImage = `url('${backgroundImage}')`;
+                alert(`Background changed to ${backgroundImage}`);
+            });
+        });
+
+        
+        selectMenu.addEventListener('change', () => {
+            const backgroundImage = selectMenu.value;
+            document.body.style.backgroundImage = `url('${backgroundImage}')`;
+            alert(`Background changed to ${backgroundImage}`);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
